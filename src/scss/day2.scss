@@ -1,0 +1,168 @@
+$pastel-pink: #d8b4a0;
+$grey: #929398;
+$black: #0a080d;
+$white: #f2f2e8;
+$light-grey: #b0aa9f;
+$light-pink: #ffdbd8;
+html {
+  background-color: $pastel-pink;
+}
+
+body {
+  background-color: $pastel-pink;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box {
+  background: none;
+  position: relative;
+  max-width: 600px;
+  width: 100vw;
+  max-height: 420px;
+  height: 70vw;
+}
+
+.elephant {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 40%;
+  height: auto;
+  padding-bottom: 40%;
+  border-radius: 50%;
+  background-color: $grey;
+}
+
+.elephant-copy {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: $grey;
+  z-index: 1;
+}
+
+.eye {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 40%;
+  right: 20%;
+  border-radius: 50%;
+  background-color: $black;
+  z-index: 3;
+}
+
+.pupil {
+  position: absolute;
+  top: 25%;
+  right: 15%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: $white;
+}
+
+.ear {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: $light-grey;
+  z-index: 2;
+  .mask {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 60%;
+    background-color: $grey;
+  }
+}
+
+.leg {
+  position: absolute;
+  width: 25%;
+  height: 30%;
+  bottom: -6%;
+  overflow: hidden;
+  background-color: $grey;
+  &.left {
+    left: 10%;
+  }
+  &.right {
+    right: 10%;
+  }
+}
+
+.toe {
+  position: absolute;
+  width: 33.333%;
+  height: 33.333%;
+  bottom: -15%;
+  border-radius: 50%;
+  background-color: $light-pink;
+  &:nth-child(1) {
+    left: 33.333%;
+  }
+  &:nth-child(2) {
+    left: 66.666%;
+  }
+}
+
+.trunk {
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: $grey;
+  .mask {
+    position: absolute;
+    width: 120%;
+    height: 50%;
+    transform: rotate(10deg);
+    background-color: $pastel-pink;
+  }
+  .cutout {
+    position: absolute;
+    top: 25%;
+    left: 23%;
+    width: 63%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: $pastel-pink;
+  }
+}
+
+.tail {
+  position: absolute;
+  width: 20%;
+  height: 4%;
+  left: -10%;
+  bottom: 20%;
+  transform: rotate(-45deg);
+  background-color: $grey;
+  .tip {
+    position: absolute;
+    width: 50%;
+    height: 250%;
+    left: -20%;
+    bottom: -60%;
+    border-radius: 50%;
+    background-color: $grey;
+  }
+}
