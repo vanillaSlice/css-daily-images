@@ -18,7 +18,7 @@
     "scss": "node-sass --output-style compressed -o public/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r public/css/*",
     "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
-    "start": "npm-run-all watch:css",
+    "start": "npm-run-all build watch:css",
     "build:css": "npm-run-all scss autoprefixer",
     "build": "run-s build:**",
     "deploy:gh-pages": "gh-pages -d public",
