@@ -7,7 +7,7 @@
 npm install
 ```
 
-## Compile SCSS and watch for changes
+## Compile files and watch for changes
 ```
 npm start
 ```
