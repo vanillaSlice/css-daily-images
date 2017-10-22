@@ -1,0 +1,236 @@
+$olive: #393d3f;
+$aqua: #7ae7c7;
+$grey: #e5e9ec;
+$red: #ef767a;
+
+html {
+  background-color: $olive;
+}
+
+body {
+  background-color: $olive;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box {
+  background: none;
+  position: relative;
+  max-width: 600px;
+  width: 100vw;
+  max-height: 420px;
+  height: 70vw;
+}
+
+.clock {
+  position: absolute;
+  top: 2.5%;
+  left: 15%;
+  width: 70%;
+  height: auto;
+  padding-bottom: 70%;
+  border-radius: 50%;
+  background-color: $grey;
+  
+  .inner {
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background-color: $olive;
+  }
+}
+
+.hand {
+  position: absolute;
+  transform-origin: 100% 50%;
+  background-color: $grey;
+  z-index: 2;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  
+  &.hour {
+    top: 49%;
+    left: 25%;
+    width: 25%;
+    height: 2%;
+  }
+  
+  &.minute {
+    top: 49%;
+    left: 15%;
+    width: 35%;
+    height: 2%;
+  }
+  
+  &.second {
+    top: 49%;
+    left: 10%;
+    width: 40%;
+    height: 1%;
+    background-color: $red;
+  }
+}
+
+.center {
+  position: absolute;
+  top: 47.5%;
+  left: 47.5%;
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  background-color: $aqua;
+  z-index: 3;
+}
+
+.number-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  &.one {
+    transform: rotate(30deg);
+  }
+  
+  &.two {
+    transform: rotate(60deg);
+  }
+  
+  &.three {
+    transform: rotate(90deg);
+  }
+  
+  &.four {
+    transform: rotate(120deg);
+  }
+  
+  &.five {
+    transform: rotate(150deg);
+  }
+  
+  &.six {
+    transform: rotate(180deg);
+  }
+  
+  &.seven {
+    transform: rotate(210deg);
+  }
+  
+  &.eight {
+    transform: rotate(240deg);
+  }
+  
+  &.nine {
+    transform: rotate(270deg);
+  }
+  
+  &.ten {
+    transform: rotate(300deg);
+  }
+  
+  &.eleven {
+    transform: rotate(330deg);
+  }
+}
+
+.number {
+  position: absolute;
+  border-radius: 50%;
+  background-color: $aqua;
+  
+  &.twelve {
+    top: 2%;
+    left: 42%;
+    width: 16%;
+    height: 16%;
+  }
+  
+  &.one {
+    top: 7.5%;
+    left: 47.5%;
+    width: 5%;
+    height: 5%;
+  }
+  
+  &.two {
+    top: 7%;
+    left: 47%;
+    width: 6%;
+    height: 6%;
+  }
+  
+  &.three {
+    top: 6.5%;
+    left: 46.5%;
+    width: 7%;
+    height: 7%;
+  }
+  
+  &.four {
+    top: 6%;
+    left: 46%;
+    width: 8%;
+    height: 8%;
+  }
+  
+  &.five {
+    top: 5.5%;
+    left: 45.5%;
+    width: 9%;
+    height: 9%;
+  }
+  
+  &.six {
+    top: 5%;
+    left: 45%;
+    width: 10%;
+    height: 10%;
+  }
+  
+  &.seven {
+    top: 4.5%;
+    left: 44.5%;
+    width: 11%;
+    height: 11%;
+  }
+  
+  &.eight {
+    top: 4%;
+    left: 44%;
+    width: 12%;
+    height: 12%;
+  }
+  
+  &.nine {
+    top: 3.5%;
+    left: 43.5%;
+    width: 13%;
+    height: 13%;
+  }
+  
+  &.ten {
+    top: 3%;
+    left: 43%;
+    width: 14%;
+    height: 14%;
+  }
+  
+  &.eleven {
+    top: 2.5%;
+    left: 42.5%;
+    width: 15%;
+    height: 15%;
+  }
+}
