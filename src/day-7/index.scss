@@ -1,0 +1,225 @@
+$background: #ab87ff;
+$ruler: #ffff46;
+$line: #3c3744;
+$pencil: #8edce6;
+$eraser: #fface4;
+$metal: #37515f;
+$tip: #c5a48a;
+
+html {
+  background-color: $background;
+}
+
+body {
+  background-color: $background;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box {
+  background: none;
+  position: relative;
+  max-width: 600px;
+  width: 100vw;
+  max-height: 420px;
+  height: 70vw;
+}
+
+.ruler {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 20%;
+  height: 100%;
+  transform: rotate(2deg);
+  padding: 1% 0;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 0 10px darken($background, 20%);
+  background-color: $ruler;
+  
+  .eye {
+    position: absolute;
+    top: 10%;
+    width: 10%;
+    height: 3%;
+    border-radius: 50%;
+    background-color: $line;
+    z-index: 2;
+    
+    &.left {
+      left: 35%;
+    }
+  
+    &.right {
+      left: 60%;
+    }
+  }
+  
+  .smile {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 35%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: $line;
+  
+    .mask {
+      position: absolute;
+      top: -5%;
+      left: -10%;
+      width: 120%;
+      height: 60%;
+      background-color: $ruler;
+    }
+  
+    .cutout {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      background-color: $ruler;
+    }
+  }
+  
+  .line {
+    position: relative;
+    margin-bottom: 5%;
+    width: 15%;
+    height: 1%;
+    background-color: $line;
+
+    &:nth-child(5n + 1) {
+      width: 20%;
+    }
+  }
+}
+
+.pencil {
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  width: 5%;
+  height: 100%;
+  transform: rotate(350deg);
+  
+  .eraser {
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    border-radius: 5px 5px 0 0;
+    background-color: $eraser;
+  }
+  
+  .metal {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    height: 2%;
+    background-color: $metal;
+  }
+  
+  .middle {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 80%;
+    background-color: $pencil;
+  }
+  
+  .tip {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    height: 10%;
+    background-color: $tip;
+  }
+  
+  .lead {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    height: 40%;
+    background-color: $line;
+  }
+  
+  .mask {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    height: 20%;
+    background-color: $background;
+    
+    &.left {
+      left: -100%;
+      transform-origin: 100% 0;
+      transform: rotate(340deg);
+    }
+    
+    &.right {
+      right: -100%;
+      transform-origin: 0 0;
+      transform: rotate(20deg);
+    }
+  }
+  
+  .eye {
+    position: absolute;
+    top: 5%;
+    width: 20%;
+    height: 2%;
+    border-radius: 50%;
+    background-color: $line;
+    z-index: 2;
+
+    &.left {
+      left: 20%;
+    }
+
+    &.right {
+      left: 60%;
+    }
+  }
+  
+  .smile {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 8%;
+    border-radius: 50%;
+    background-color: $line;
+
+    .mask {
+      position: absolute;
+      top: -5%;
+      left: -10%;
+      width: 120%;
+      height: 60%;
+      background-color: $pencil;
+    }
+
+    .cutout {
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      width: 70%;
+      height: 70%;
+      border-radius: 50%;
+      background-color: $pencil;
+    }
+  }
+}
