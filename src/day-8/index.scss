@@ -1,0 +1,197 @@
+$font-family: 'Reenie Beanie', cursive;
+$background: #93d5d4;
+$notepad: #40403e;
+$paper: #f8f8f1;
+$line: #ababa4;
+$loop: #a06644;
+$text: #444;
+$pencil: #ffc876;
+$eraser: #f7757d;
+$metal: #bdbec2;
+$tip: #f09182;
+
+html {
+  background-color: $background;
+}
+
+body {
+  background-color: $background;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box {
+  background: none;
+  position: relative;
+  max-width: 600px;
+  width: 100vw;
+  max-height: 420px;
+  height: 70vw;
+}
+
+.notepad {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 80%;
+  height: 70%;
+  border-radius: 4px;
+  background-color: $notepad;
+}
+
+.page {
+  position: absolute;
+  top: 2.5%;
+  width: 47.5%;
+  height: 95%;
+  background: linear-gradient(0, $line 0%, $paper 8%);
+  background-size: 100% 5%;
+  background-color: $paper;
+  
+  &.left {
+    border-radius: 6px 1px 1px 6px;
+    left: 1.5%;
+  }
+  
+  &.right {
+    border-radius: 1px 6px 6px 1px;
+    right: 1.5%;
+  }
+}
+
+.loop {
+  position: absolute;
+  left: 46%;
+  width: 8%;
+  height: 2%;
+  border-radius: 2px;
+  background-color: $loop;
+  z-index: 1;
+  
+  &:nth-child(2) {
+    top: 5%;
+  }
+  
+  &:nth-child(3) {
+    top: 13%;
+  }
+  
+  &:nth-child(4) {
+    top: 21%;
+  }
+  
+  &:nth-child(5) {
+    top: 29%;
+  }
+  
+  &:nth-child(6) {
+    top: 37%;
+  }
+  
+  &:nth-child(7) {
+    top: 45%;
+  }
+  
+  &:nth-child(8) {
+    top: 53%;
+  }
+  
+  &:nth-child(9) {
+    top: 61%;
+  }
+  
+  &:nth-child(10) {
+    top: 69%;
+  }
+  
+  &:nth-child(11) {
+    top: 77%;
+  }
+  
+  &:nth-child(12) {
+    top: 85%;
+  }
+  
+  &:nth-child(13) {
+    top: 93%;
+  }
+}
+
+p {
+  position: absolute;
+  top: 5%;
+  left: 12%;
+  right: 6%;
+  margin: 0;
+  font-size: 3vw;
+  line-height: 1.2;
+  color: $text;
+}
+
+.pencil {
+  position: absolute;
+  bottom: 30%;
+  left: 30%;
+  width: 2%;
+  height: 40%;
+  transform: rotate(200deg);
+  overflow: auto;
+  
+  .eraser {
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    border-radius: 5px 5px 0 0;
+    background-color: $eraser;
+  }
+  
+  .metal {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    height: 2%;
+    background-color: $metal;
+  }
+  
+  .middle {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 80%;
+    background-color: $pencil;
+  }
+  
+  .tip {
+    position: absolute;
+    top: 90%;
+    width: 0;
+    height: 0;
+    border-left: 1vw solid transparent;
+	  border-right: 1vw solid transparent;
+	  border-top: 2.4vw solid $tip;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 600px) {  
+  p {
+    font-size: 18px;
+  }
+  
+  .pencil .tip {
+    border-left: 6px solid transparent;
+	  border-right: 6px solid transparent;
+	  border-top: 16px solid $tip;
+  }
+}
