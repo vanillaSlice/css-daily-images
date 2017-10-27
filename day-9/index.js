@@ -1,0 +1,1 @@
+'use strict';window.addEventListener('load',function(){var a=document.querySelector('.month'),b=document.querySelector('.day'),c=new Date;a.textContent=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][c.getMonth()],b.textContent=c.getDate()});
