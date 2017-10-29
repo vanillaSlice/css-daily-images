@@ -6,14 +6,11 @@ $month-background: #ed5553;
 $month-color: #f9f9f9;
 $day-color: #595959;
 
-html {
+html,
+body {
   background: $background-color url($background-img) no-repeat center center fixed;
   background-size: cover;
   font-family: sans-serif;
-}
-
-html,
-body {
   height: 100%;
   margin: 0;
   padding: 0;
