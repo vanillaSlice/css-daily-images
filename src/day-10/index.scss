@@ -1,0 +1,133 @@
+$background: #ffd4be;
+$pencil-jar: #af9fa5;
+$pencil: #f9dc5c;
+$eraser: #ed6b86;
+$metal: #857e7b;
+$tip: #f1bb87;
+$lead: #5d675b;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box {
+  position: relative;
+  max-height: 368px;
+  height: 64vw;
+  max-width: 460px;
+  width: 80vw;
+}
+
+.pencil-jar {
+  position: absolute;
+  left: 25%;
+  bottom: 10%;
+  width: 50%;
+  height: 60%;
+  border-radius: 0 0 15px 15px;
+  background-color: $pencil-jar;
+  border-left: 5px solid darken($pencil-jar, 10%);
+  border-bottom: 5px solid darken($pencil-jar, 10%);
+  border-right: 5px solid darken($pencil-jar, 10%);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.pencil {
+  position: absolute;
+  width: 5%;
+  height: 90%;
+  transform-origin: 50% 100%;
+  
+  .eraser {
+    position: absolute;
+    width: 100%;
+    height: 6%;
+    border-radius: 5px 5px 0 0;
+    background-color: $eraser;
+  }
+  
+  .metal {
+    position: absolute;
+    top: 6%;
+    width: 100%;
+    height: 2%;
+    background-color: $metal;
+  }
+  
+  .middle {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    height: 80%;
+    background-color: $pencil;
+  }
+  
+  .tip {
+    position: absolute;
+    top: 88%;
+    width: 0;
+    height: 0;
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+    border-top: 4vw solid $tip;
+    
+    @media (min-width: 576px) {
+      border-left: 11.5px solid transparent;
+      border-right: 11.5px solid transparent;
+      border-top: 26px solid $tip;
+    }
+  }
+  
+  .lead {
+    position: absolute;
+    top: 92%;
+    width: 0;
+    height: 0;
+    left: 1vw;
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vw solid $lead;
+    
+    @media (min-width: 576px) {
+      left: 5.75px;
+      border-left: 5.75px solid transparent;
+      border-right: 5.75px solid transparent;
+      border-top: 13px solid $lead;
+    }
+  } 
+  
+  &:nth-child(2) {
+    bottom: 9%;
+    left: 27%;
+    transform: rotate(10deg);
+  }
+  
+  &:nth-child(3) {
+    bottom: 9%;
+    left: 30%;
+    transform: rotate(25deg);
+  }
+  
+  &:nth-child(4) {
+    bottom: 9%;
+    left: 33%;
+    transform: rotate(35deg);
+  }
+}
