@@ -4,15 +4,15 @@
 
 ## Install dependencies
 ```
-npm install
+yarn install
 ```
 
 ## Compile files and watch for changes
 ```
-npm start
+yarn start
 ```
 
 ## Deploy to GitHub Pages
 ```
-npm run deploy
+yarn deploy
 ```
