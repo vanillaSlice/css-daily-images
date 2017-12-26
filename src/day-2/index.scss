@@ -1,21 +1,23 @@
-$pastel-pink: #d8b4a0;
-$grey: #929398;
 $black: #0a080d;
-$white: #f2f2e8;
+$grey: #929398;
 $light-grey: #b0aa9f;
 $light-pink: #ffdbd8;
+$pastel-pink: #d8b4a0;
+$white: #f2f2e8;
+
 html {
   background-color: $pastel-pink;
+  height: 100%;
 }
 
 body {
-  background-color: $pastel-pink;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  background-color: $pastel-pink;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0; 
 }
 
 *,
@@ -26,143 +28,152 @@ body {
 
 .box {
   background: none;
-  position: relative;
-  max-width: 600px;
-  width: 100vw;
-  max-height: 420px;
   height: 70vw;
+  margin: auto;
+  max-height: 420px;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
 }
 
 .elephant {
+  background-color: $grey;
+  border-radius: 50%;
+  height: auto;
+  left: 30%;
+  padding-bottom: 40%;
   position: absolute;
   top: 25%;
-  left: 30%;
   width: 40%;
-  height: auto;
-  padding-bottom: 40%;
-  border-radius: 50%;
-  background-color: $grey;
 }
 
 .elephant-copy {
+  background-color: $grey;
+  border-radius: 50%;
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: $grey;
   z-index: 1;
 }
 
 .eye {
-  position: absolute;
-  width: 10%;
-  height: 10%;
-  top: 40%;
-  right: 20%;
-  border-radius: 50%;
   background-color: $black;
+  border-radius: 50%;
+  height: 10%;
+  position: absolute;
+  right: 20%;
+  top: 40%;
+  width: 10%;
   z-index: 3;
 }
 
 .pupil {
-  position: absolute;
-  top: 25%;
-  right: 15%;
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
   background-color: $white;
+  border-radius: 50%;
+  height: 30%;
+  position: absolute;
+  right: 15%;
+  top: 25%;
+  width: 30%;
 }
 
 .ear {
+  background-color: $light-grey;
+  border-radius: 50%;
+  height: 60%;
+  left: 25%;
   position: absolute;
   top: 15%;
-  left: 25%;
   width: 60%;
-  height: 60%;
-  border-radius: 50%;
-  background-color: $light-grey;
   z-index: 2;
+
   .mask {
-    position: absolute;
-    width: 40%;
+    background-color: $grey;
     height: 100%;
     left: 60%;
-    background-color: $grey;
+    position: absolute;
+    width: 41%;
   }
 }
 
 .leg {
+  background-color: $grey;
+  bottom: -6%;
+  height: 30%;
+  overflow: hidden;
   position: absolute;
   width: 25%;
-  height: 30%;
-  bottom: -6%;
-  overflow: hidden;
-  background-color: $grey;
   &.left {
     left: 10%;
   }
+
   &.right {
     right: 10%;
   }
 }
 
 .toe {
+  background-color: $light-pink;
+  border-radius: 50%;
+  bottom: -15%;
+  height: 33.333%;
   position: absolute;
   width: 33.333%;
-  height: 33.333%;
-  bottom: -15%;
-  border-radius: 50%;
-  background-color: $light-pink;
+  
   &:nth-child(1) {
     left: 33.333%;
   }
+
   &:nth-child(2) {
     left: 66.666%;
   }
 }
 
 .trunk {
+  background-color: $grey;
+  border-radius: 50%;
+  height: 80%;
+  left: 80%;
   position: absolute;
   top: 15%;
-  left: 80%;
   width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  background-color: $grey;
+  
   .mask {
-    position: absolute;
-    width: 120%;
-    height: 50%;
-    transform: rotate(10deg);
     background-color: $pastel-pink;
+    height: 50%;
+    position: absolute;
+    transform: rotate(10deg);
+    width: 120%;
   }
+
   .cutout {
+    background-color: $pastel-pink;
+    border-radius: 50%;
+    height: 60%;
+    left: 23%;
     position: absolute;
     top: 25%;
-    left: 23%;
     width: 63%;
-    height: 60%;
-    border-radius: 50%;
-    background-color: $pastel-pink;
   }
 }
 
 .tail {
-  position: absolute;
-  width: 20%;
+  background-color: $grey;
+  bottom: 20%;
   height: 4%;
   left: -10%;
-  bottom: 20%;
+  position: absolute;
   transform: rotate(-45deg);
-  background-color: $grey;
+  width: 20%;
+
   .tip {
-    position: absolute;
-    width: 50%;
+    background-color: $grey;
+    border-radius: 50%;
+    bottom: -60%;
     height: 250%;
     left: -20%;
-    bottom: -60%;
-    border-radius: 50%;
-    background-color: $grey;
+    position: absolute;
+    width: 50%;
   }
 }

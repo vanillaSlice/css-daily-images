@@ -1,10 +1,10 @@
-$background-img: 'https://images.unsplash.com/photo-1495374316456-4d7e380881a7?auto=format&fit=crop&w=1334&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D';
 $background-color: #d0cdd0;
+$background-img: 'https://images.unsplash.com/photo-1495374316456-4d7e380881a7?auto=format&fit=crop&w=1334&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D';
 $calendar-background: #707e82;
-$paper: #f9f9f9;
+$day-color: #595959;
 $month-background: #ed5553;
 $month-color: #f9f9f9;
-$day-color: #595959;
+$paper: #f9f9f9;
 
 html,
 body {
@@ -19,9 +19,9 @@ body {
 body,
 .month,
 .day {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 *,
@@ -30,49 +30,60 @@ body,
   box-sizing: border-box;
 }
 
-.calendar {
+.box {
+  background: none;
+  height: 70vw;
+  margin: auto;
+  max-height: 420px;
+  max-width: 600px;
   position: relative;
-  width: 80vw;
-  max-width: 300px;
-  height: 80vw;
-  max-height: 300px;
-  transform: rotate(-5deg);
+  width: 100vw;
+}
+
+.calendar {
   background-color: $calendar-background;
+  height: auto;
+  left: 25%;
+  padding-bottom: 50%;
+  position: absolute;
+  top: 12.5%;
+  transform: rotate(-5deg);
+  width: 50%;
 }
 
 .paper {
-  position: absolute;
-  top: -2.5%;
-  left: 2.5%;
-  width: 95%;
-  height: 97.5%;
   background-color: $paper;
+  height: 97.5%;
+  left: 2.5%;
+  position: absolute;
   text-align: center;
+  top: -2.5%;
+  width: 95%;
   
   .month {
-    position: absolute;
-    width: 100%;
-    height: 30%;
     background-color: $month-background;
     color: $month-color;
-    font-size: 15vw;
+    font-size: 10vw;
+    height: 30%;
+    position: absolute;
     text-transform: uppercase;
+    width: 100%;
     
     @media (min-width: 400px) {
-      font-size: 64px;
+      font-size: 50px;
     }
   }
   
   .day {
+    color: $day-color;
+    font-size: 30vw;
+    height: 70%;
     position: absolute;
     top: 30%;
     width: 100%;
-    height: 70%;
-    color: $day-color;
-    font-size: 40vw;
 
     @media (min-width: 400px) {
-      font-size: 150px;
+      font-size: 120px;
     }
   }
 }

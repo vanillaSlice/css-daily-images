@@ -1,20 +1,21 @@
-$olive: #393d3f;
 $aqua: #7ae7c7;
 $grey: #e5e9ec;
+$olive: #393d3f;
 $red: #ef767a;
 
 html {
   background-color: $olive;
+  height: 100%;
 }
 
 body {
+  align-items: center;
   background-color: $olive;
+  display: flex;
+  height: 100%;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 *,
@@ -25,70 +26,71 @@ body {
 
 .box {
   background: none;
-  position: relative;
-  max-width: 600px;
-  width: 100vw;
-  max-height: 420px;
   height: 70vw;
+  margin: auto;
+  max-height: 420px;
+  max-width: 600px;
+  position: relative;
+  width: 100vw;
 }
 
 .clock {
-  position: absolute;
-  top: 2.5%;
-  left: 15%;
-  width: 70%;
-  height: auto;
-  padding-bottom: 70%;
   border-radius: 50%;
+  height: auto;
+  left: 15%;
+  padding-bottom: 70%;
+  position: absolute;
+  top: 7.5%;
+  width: 70%;
 }
 
 .hand {
-  position: absolute;
-  border-radius: 5px;
-  transform-origin: 100% 50%;
   background-color: $grey;
-  z-index: 2;
+  border-radius: 5px;
+  position: absolute;
+  transform-origin: 100% 50%;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  z-index: 2;
   
   &.hour {
-    top: 49%;
-    left: 25%;
-    width: 25%;
     height: 2%;
+    left: 25%;
+    top: 49%;
+    width: 25%;
   }
   
   &.minute {
-    top: 49%;
-    left: 15%;
-    width: 35%;
     height: 2%;
+    left: 15%;
+    top: 49%;
+    width: 35%;
   }
   
   &.second {
-    top: 49.5%;
-    left: 10%;
-    width: 40%;
-    height: 1%;
     background-color: $red;
+    height: 1%;
+    left: 10%;
+    top: 49.5%;
+    width: 40%;
   }
 }
 
 .center {
+  background-color: $aqua;
+  border-radius: 50%;
+  height: 5%;
+  left: 47.5%;
   position: absolute;
   top: 47.5%;
-  left: 47.5%;
   width: 5%;
-  height: 5%;
-  border-radius: 50%;
-  background-color: $aqua;
   z-index: 3;
 }
 
 .number-wrapper {
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
   
   &.one {
     transform: rotate(30deg);
@@ -136,90 +138,90 @@ body {
 }
 
 .number {
-  position: absolute;
-  border-radius: 50%;
   background-color: $aqua;
+  border-radius: 50%;
+  position: absolute;
   
   &.twelve {
+    height: 16%;
     left: 42%;
     width: 16%;
-    height: 16%;
   }
   
   &.one {
-    top: 5.5%;
-    left: 47.5%;
-    width: 5%;
     height: 5%;
+    left: 47.5%;
+    top: 5.5%;
+    width: 5%;
   }
   
   &.two {
-    top: 5%;
-    left: 47%;
-    width: 6%;
     height: 6%;
+    left: 47%;
+    top: 5%;
+    width: 6%;
   }
   
   &.three {
-    top: 4.5%;
-    left: 46.5%;
-    width: 7%;
     height: 7%;
+    left: 46.5%;
+    top: 4.5%;
+    width: 7%;
   }
   
   &.four {
-    top: 4%;
-    left: 46%;
-    width: 8%;
     height: 8%;
+    left: 46%;
+    top: 4%;
+    width: 8%;
   }
   
   &.five {
-    top: 3.5%;
-    left: 45.5%;
-    width: 9%;
     height: 9%;
+    left: 45.5%;
+    top: 3.5%;
+    width: 9%;
   }
   
   &.six {
-    top: 3%;
-    left: 45%;
-    width: 10%;
     height: 10%;
+    left: 45%;
+    top: 3%;
+    width: 10%;
   }
   
   &.seven {
-    top: 2.5%;
-    left: 44.5%;
-    width: 11%;
     height: 11%;
+    left: 44.5%;
+    top: 2.5%;
+    width: 11%;
   }
   
   &.eight {
-    top: 2%;
-    left: 44%;
-    width: 12%;
     height: 12%;
+    left: 44%;
+    top: 2%;
+    width: 12%;
   }
   
   &.nine {
-    top: 1.5%;
-    left: 43.5%;
-    width: 13%;
     height: 13%;
+    left: 43.5%;
+    top: 1.5%;
+    width: 13%;
   }
   
   &.ten {
-    top: 1%;
-    left: 43%;
-    width: 14%;
     height: 14%;
+    left: 43%;
+    top: 1%;
+    width: 14%;
   }
   
   &.eleven {
-    top: 0.5%;
-    left: 42.5%;
-    width: 15%;
     height: 15%;
+    left: 42.5%;
+    top: 0.5%;
+    width: 15%;
   }
 }
