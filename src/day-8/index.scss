@@ -1,6 +1,7 @@
 $background: #93d5d4;
 $eraser: #f7757d;
 $font-family: 'Reenie Beanie', cursive;
+$lead: #5d675b;
 $line: #ababa4;
 $loop: #a06644;
 $metal: #bdbec2;
@@ -53,7 +54,7 @@ body {
 }
 
 .page {
-  background: linear-gradient(0, $line 0%, $paper 8%);
+  background: linear-gradient(0, transparent 5rem, $line 0, transparent 5.1rem), linear-gradient($line 1px, transparent 0);
   background-color: $paper;
   background-size: 100% 5%;
   height: 95%;
@@ -179,9 +180,19 @@ p {
 	  border-right: 1vw solid transparent;
 	  border-top: 2.4vw solid $tip;
     height: 0;
-    overflow: hidden;
     position: absolute;
     top: 90%;
+    width: 0;
+  }
+
+  .lead {
+    border-left: 0.5vw solid transparent;
+    border-right: 0.5vw solid transparent;
+    border-top: 1.2vw solid $lead;
+    height: 0;
+    left: 0.5vw;
+    position: absolute;
+    top: 94.5%;
     width: 0;
   }
 }
@@ -191,9 +202,18 @@ p {
     font-size: 18px;
   }
   
-  .pencil .tip {
-    border-left: 6px solid transparent;
-	  border-right: 6px solid transparent;
-	  border-top: 16px solid $tip;
+  .pencil {
+    .tip {
+      border-left: 6px solid transparent;
+	    border-right: 6px solid transparent;
+	    border-top: 16px solid $tip;
+    }
+
+    .lead {
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 8px solid $lead;
+      left: 3px;
+    }
   }
 }
