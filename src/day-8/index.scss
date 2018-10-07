@@ -54,7 +54,7 @@ body {
 }
 
 .page {
-  background: linear-gradient(0, transparent 5rem, $line 0, transparent 5.1rem), linear-gradient($line 1px, transparent 0);
+  background: linear-gradient(0, $line 0%, $paper 8%);
   background-color: $paper;
   background-size: 100% 5%;
   height: 95%;
